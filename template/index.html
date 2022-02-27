@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+ 
+
+  <div class="container text-center  my-4">
+
+    <h2>Coronavirus Probability Detector</h2>
+  </div>
+  <div class="container  my-3">
+    <form method='POST' action='/'>{%csrf_token%}
+      <div class=" form-group mb-1 my-2">
+        <label for="Fever" class="form-label">Enter Fever Value</label>
+        <input type="form-control" class="form-control" id="Fever" name="Fever" "" placeholder="Enter fever value in Fahrenheit (98-105) "
+          aria-describedby="Help">
+      </div>
+
+      <div class="form-group mb-2 my-2">
+        <label for="Bodypain"> Body Pain</label>
+        <select custom class="form-control custom-select" name="Bodypain" "" id="Bodypain">
+          <option value="0">No Pain</option>
+          <option value="1">High Pain</option>
+        </select>
+      </div>
+
+      <div class="form-group mb-1 my-3">
+        <label for="Age" class="form-label">Enter Your Age</label>
+        <input type="form-control" class="form-control" id="Age" name="Age" ""  placeholder="Enter your age"
+          aria-describedby="emailHelp">
+      </div>
+
+      <div class="form-group mb-1 my-3">
+        <label for="Runnynose">Runny Nose</label>
+        <select class="form-control custom-select" name="Runnynose" "" id="Runnynose">
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+      <div class="form-group  mb-1 my-3">
+        <label for="Diffbreath">Breathing Difficulty</label>
+        <select class="form-control custom-select" name="Diffbreath" "" id="Diffbreath">
+          <option value="-1">No Difficulty</option>
+          <option value="0">Little Difficulty</option>
+          <option value="1">High Difficulty</option>
+
+        </select>
+      </div>
+ <div 
+ class="container my-4 text-center"><button type="submit" class="btn btn-success my-2 my-sm-0">Submit</button>
+ </div>
+    </form>
+  </div>
+{% endblock body %}
+
+
